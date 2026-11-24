@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed Game | Arcade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app">
+
+        <header class="topbar">
+            <div class="logo">SPEED<span>GAME</span></div>
+            <button id="soundBtn" class="sound-btn">🔊 SOUND ON</button>
+        </header>
+
+        <section class="hero">
+            <p class="eyebrow">REACTION • SPEED • SKILL</p>
+            <h1>TEST YOUR <span>REFLEXES.</span></h1>
+            <p class="description">
+                Hit the target and beat your high score!
+            </p>
+        </section>
+
+        <section class="stats">
+            <div class="stat-card">
+                <span>SCORE</span>
+                <strong id="score">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>TIME LEFT</span>
+                <strong id="time">30</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>BEST SCORE</span>
+                <strong id="best">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>LEVEL</span>
+                <strong id="level">1</strong>
+            </div>
+        </section>
+
+        <section class="extras">
+
+            <div class="extra-card">
+                <h2>🏆 ACHIEVEMENTS</h2>
+                <p class="extra-subtitle">Unlock rewards as you play</p>
+                <div id="achievements"></div>
+            </div>
+
+            <div class="extra-card">
+                <h2>🥇 LEADERBOARD</h2>
+                <p class="extra-subtitle">Your top 5 scores</p>
+                <div id="leaderboard"></div>
+            </div>
+
+            <div class="extra-card skins-card">
+                <h2>🎨 TARGET SKINS</h2>
+                <p class="extra-subtitle">Choose your target color</p>
+
+                <div class="skin-list">
+                    <button class="skin" data-skin="blue">BLUE</button>
+                    <button class="skin" data-skin="purple">PURPLE</button>
+                    <button class="skin" data-skin="red">RED</button>
+                    <button class="skin" data-skin="green">GREEN</button>
+                    <button class="skin" data-skin="gold">GOLD</button>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="game-panel">
+
+            <div class="panel-header">
+                <div>
+                    <span class="small-label">CURRENT CHALLENGE</span>
+                    <h2>Speed Challenge</h2>
+                </div>
+
+                <button id="pauseBtn" class="pause-btn" disabled>
+                    PAUSE
+                </button>
+            </div>
+
+            <div class="progress-track">
+                <div id="progress" class="progress"></div>
+            </div>
+
+            <div class="game-area" id="gameArea">
+
+                <button id="target" aria-label="Hit target"></button>
+
+                <div class="overlay" id="overlay">
+                    <div class="overlay-content">
+                        <div class="game-icon">✨</div>
+                        <h2 id="overlayTitle">READY TO PLAY?</h2>
+                        <p id="overlayText">
+                            Hit the target as many times as possible in 30 seconds.
+                        </p>
+                        <button id="startBtn" class="primary-btn">
+                            START GAME →
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="panel-footer">
+                <span>● TARGET ACTIVE</span>
+                <span id="combo">COMBO: 0x</span>
+            </div>
+
+        </section>
+
+        <footer>
+            © 2026 SPEED GAME — BUILT FOR CHAMPIONS.
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
